@@ -1,4 +1,4 @@
-class Solution(object):
+'''class Solution(object):
     def mergeAlternately(self, word1, word2):
         
         #It starts with the word1, and then goes with word2
@@ -8,9 +8,6 @@ class Solution(object):
         
         for i in range(min(size1, size2)):
             solution += word1[i] + word2[i]
-        '''
-        if len(word2) > size:
-            solution += word2[size:]'''
         
         if size2 > size1:
             solution += word2[size1:]
@@ -21,7 +18,25 @@ class Solution(object):
         #if the word2 is bigger than word1, the final letters
         #will go till the end
 
-        return solution
+        return solution'''
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        m = len(word1)
+        n = len(word2)
+        i = 0
+        j = 0
+        result = []
+
+        while i < m or j < n:
+            if i < m:
+                result += word1[i]
+                i += 1
+            if j < n:
+                result += word2[j]
+                j += 1
+
+        return "".join(result)
+
 
 def main():
     word1 = input("input word1:     \n")
