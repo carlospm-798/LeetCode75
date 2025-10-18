@@ -7,12 +7,18 @@ class Solution(object):
                 return True
             
             if (x2 > y2):
-                x2 = x2 - (y2%x2)
+                if (y2 > y):
+                    x2 %= y2
+                else:
+                    return (x2 - x) % y == 0
             elif (y2 > x2):
-                y2 = y2 - (x2%y2)
-            elif (x2 == y2):
+                if (x2 > x):
+                    y2 %= x2
+                else:
+                    return (y2 - y) % x == 0
+            else:
                 return False
-        
+
         return False
     
 
