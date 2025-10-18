@@ -1,6 +1,6 @@
 class Solution(object):
 
-    def canReach(x1, y1, x2, y2):
+    def canReach(self, x1, y1, x2, y2):
         visited = set()
 
         def dfs(x, y):
