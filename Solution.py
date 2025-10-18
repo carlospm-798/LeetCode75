@@ -22,8 +22,14 @@ def main():
 
     solution = Solution()
 
-    print(f"\n  case 1:     1, 1: Starting in 3, 5. Solution must be \'Yes\'.\n")
-    print(f'\n  Solution case 1:    {solution.canReach(1, 1, 3, 5)}')
+    print(f"\n  case 1:     1, 1: Starting in 3, 5. Solution must be \'Yes\'.")
+    print(f'Solution case 1:    {solution.canReach(1, 1, 3, 5)}\n')
+
+    print(f"\n  case 1:     1, 1: Starting in 2, 2. Solution must be \'No\'.")
+    print(f'Solution case 1:    {solution.canReach(1, 1, 2, 2)}\n')
+
+    print(f"\n  case 1:     1, 1: Starting in 3, 5. Solution must be \'Yes\'.")
+    print(f'Solution case 1:    {solution.canReach(1, 1, 1, 1)}\n')
 
 if __name__ == '__main__':
     main()
